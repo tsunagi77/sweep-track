@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background: linear-gradient(5deg, darkred, navy);
+}
+
+.topbar {
+  background-color: yellow;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 10;
+  border-color: navy;
+}
+
+.logo {
+  height: 50px;
+  width: 250px;
+}
+
+.menu-btn {
+  border: none;
+  background: none;
+  color: green;
+  font-size: 25px;
+  cursor: pointer;
+  display: block;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), navy), url("mmdabg.png");
+  background-size: cover;
+  color: #ecf0f1;
+  padding-top: 80px;
+  height: 100%;
+  position: fixed;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.sidebar button {
+  text-decoration: none;
+  width: 80%;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.sidebar button:hover {
+  background-color: red;
+}
+
+.sidebar button.active {
+  background-color: yellow;
+  color: green;
+}
+
+.content {
+  background: url('leaf.jpg') no-repeat center center/cover;
+  margin: 65px 5px 5px 225px;
+  flex: 1;
+  padding: 20px;
+  border-radius: 30px;
+  height: 100%;
+}
+
+@media (max-width: 765px) {
+  .topbar{
+    z-index: 12;
+  }
+  .sidebar {
+    margin-top: 10px;
+    width: 10px;
+    padding-top: 60px;
+    z-index: 10;
+  }
+
+  .sidebar button {
+    text-align: center;
+  }
+  .content {
+    margin: 65px 5px 5px 15px;
+  }
+  .sidebar button span {
+    display: none;
+  }
+}
+.announcement, .documentation, .assessment{
+  display: flex;
+  width: 70%;
+  height: 70%;
+  flex-direction: column;
+  margin: 40px auto;
+  border-style: outset;
+  border-width: thick;
+}
+.docform label {
+  display: block;
+  margin-top: 10px;
+  font-family: cursive;
+  font-size: 20px;
+}
+.preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  margin-top: 10px;
+}
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+.preview-item img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.top {
+  flex: 1;
+  display: flex;
+  color: white;
+  font-size: 27px;
+  background-color: navy;
+  justify-content: center;
+}
+
+.bottom {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #F8EFBA;
+}
+.bottom p{
+  margin: 5px auto;
+}
+.pic{
+  height: 100%;
+  width: 100%;
+}
+.head{
+  padding: 20px;
+  border: 2px dashed #333;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.weatherrs {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 30%;
+  height: 30%;
+  margin: 40px auto;
+  background-color: #1e90ff;
+  border: 5px outset #3742fa;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.attendance {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.attendance button {
+  padding: 10px;
+  margin: 15px auto;
+  background-color: navy;
+  color: white;
+  cursor: pointer;
+}
+.record{
+  padding: 20px;
+  font-family:Arial;
+  position: relative;
+}
+.record button{
+  background-color: navy;
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.record table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.record th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.healthcontent{
+  padding: 10px;
+  text-align: Left;
+
+}
+.healthcontent button{
+  display: block;
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px auto;
+  width: 150px;
+}
+.healthcontent p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.healthcontent input{
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+.container{
+  display: flex;
+  width: 50%;
+  height: 50%;
+  flex-direction: column;
+  margin: 40px auto;
+  border-style: outset;
+  border-width: thick;
+}
+.suggestion {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+.suggestion h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+.suggestion p {
+  color: dimgray;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.suggestion form {
+  display: flex;
+  flex-direction: column;
+}
+.suggestion form p{
+  text-align: left;
+}
+.suggestion label {
+  margin: 5px 0 5px;
+  text-align: left;
+  color: #333;
+  margin-top: 5px;
+
+}
+.suggestion input, textarea, button {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.suggestion textarea {
+  resize: vertical;
+  width: 100%;
+}
+.suggestion input{
+  width: 150px;
+}
+.suggestion button {
+  background-color: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#confirmationMessage {
+    color: #28a745;
+    font-weight: bold;
+}
+
